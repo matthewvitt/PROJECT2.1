@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ForeSite2</title>
+
+  module ApplicationHelper
+  def page_title(title)
+  title += " | " if title.present?
+  title += "Fore-site"
+  end
+  end
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
